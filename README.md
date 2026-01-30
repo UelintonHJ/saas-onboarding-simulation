@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# [SaaS Onboarding Simulation](saas-onboarding-simulation.vercel.app)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simulação de onboarding para um SaaS fictício, desenvolvida com foco em **redução fricção no primeiro uso, ativação rápida do usuário e mentalidade de produto aplicada ao front-end.**
 
-Currently, two official plugins are available:
+Esste projeto não tem como objetivo apenas demonstrar habilidades técnicas em React, mas sim **como decisões de UX, microcopy e fluxo impacam o comportamento do usuário nos primeiros segundos de uso de um produto.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Objetivo do Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Criar uma experiência de onboarding curta, clara e progressiva, simulando um cenário real de SaaS, onde o usuário:
+* entende rapidamente o valor do produto
+* realiza uma primeira ação significativa (ativação)
+* pode pular etapas caso já esteja familiarizado
+* chega ao dashboard sem fricções desnessárias
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧠 Mentalidade de Produto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Decisões tomadas ao longo do projeto:
+* **Onboarding em etapas curtas** para reduzir carga cognitiva
+* **Progress indicator discreto**, informando avanço sem gerar ansiedade
+* **Persistência de progresso** com localStorage
+* **Possibilidade de pular o onboarding**, respeitando usuários experientes
+* **Microcopy de loading** para reduzir incerteza
+* **Empty State orientado à ação** no dashboard
+* **Simluação de tracking de abandono** para análise de funil
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O foco é demonstrar pensamento em **ativação e retenção**, não apenas layout.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🚀 Fluxo de Onboarding
+
+1. **Welcome** <br />
+Introdução clara ao valor do produto e CTA principal
+
+2. **First Task** <br />
+Criação da primeira tarefa como evento de ativação
+
+3. **Aha Moment** <br />
+Reforço do valor percebido após a primeira ação
+
+4. **Dashboard** <br />
+Empty State ou visualização da tarefa criada
+
+---
+
+## 🛠️ Stack Utilizada
+
+* **React + TypeScript**
+* **React Router** (controle de fluxo e navegação)
+* **Tailwind CSS** (estilização rápida e consistente)
+* **Framer Motion** (transições suaves entre etapas)
+* **Vercel** (deploy)
+
+---
+
+## 📦 Como rodar o projeto localmente
+
 ```
+# Clone o repositório
+git clone https://github.com/UelintonHJ/saas-onboarding-simulation.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Acesse a pasta
+cd saas-onboarding-simulation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Instale as dependências
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Rode o projeto
+npm run dev
 ```
+O projeto estará disponível em: <br />
+http://localhost:5173
+
+---
+
+## 🌍 Demo Online
+
+https://saas-onboarding-simulation.vercel.app/
+
+---
+
+## 📌 Observações
+
+* Todos os dados são simulados
+* Não há backend ou atenticação real
+* O foco está em **UX, fluxo e decisões de produto**
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Uelinton Janke**
+Front-end Developer com foco em produto
