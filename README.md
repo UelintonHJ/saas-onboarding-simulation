@@ -93,5 +93,5 @@ https://saas-onboarding-simulation.vercel.app/
 
 ## 👤 Autor
 
-Desenvolvido por **Uelinton Janke**
+Desenvolvido por **Uelinton Janke** <br />
 Front-end Developer com foco em produto
